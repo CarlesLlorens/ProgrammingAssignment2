@@ -1,5 +1,29 @@
-## Functions that computes the inverse of a matrix
-## Don't recompute if prevously obtained the inverse (get from cache)
+##########################################################################################################
+# Coursera R Programming Course
+# Assignment 2
+# Program               : makeCacheMatrix
+# Version               : V1.3
+# Date creation         : 21/10/2014
+# Date last modification: 21/12/2014
+#
+# Description:
+#
+# Functions that computes the inverse of a matrix
+# Don't recompute if prevously obtained the inverse (get from cache)
+#
+# Function makeCacheMatrix
+# ------------------------
+# This function creates a special "matrix" object 
+# that can cache its inverse.
+# 
+# Function cacheSolve
+# -------------------
+# This function computes inverse of the special "matrix" returned by makeCacheMatrix
+# above. If the inverse has already been calculated (and the matrix has not
+# changed), then the cachesolve should retrieve the inverse from the cache.
+#
+##########################################################################################################
+
 
 ## This function creates a special "matrix" object 
 ## that can cache its inverse.
@@ -45,6 +69,7 @@ cacheSolve <- function(mat=matrix(), ...) {
   mat$setInverse(inv)     # Set the inverse 
   inv                     # Return de Inverse matrix
 }
+
 ## Test: 
 ## Computes the Inverse of matrix(1:4,2,2)
 ## x <- matrix(1:4,2,2)
@@ -54,7 +79,6 @@ cacheSolve <- function(mat=matrix(), ...) {
 ## ... some code
 ## inv_x<-cacheSolve(a) 
 ## Appears "getting cached data" and Inverse is NOT recompute
-
 ##
 ## Note: x * inverse(x) = Identity  
 ## x %*% inv_x 
